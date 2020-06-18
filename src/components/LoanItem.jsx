@@ -3,6 +3,7 @@ import {
   Col, Row, FormGroup, Input, Label,
 } from 'reactstrap';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledLabel = styled(Label)`
   color: #585858;
@@ -54,6 +55,11 @@ const LoanItem = ({ loan, onChange }) => {
       </Col>
     </Row>
   );
+};
+
+LoanItem.propTypes = {
+  loan: PropTypes.objectOf(PropTypes.any).isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default LoanItem;

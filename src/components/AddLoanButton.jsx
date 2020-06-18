@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledButton = styled(Button)`
   box-shadow: none; 
@@ -19,5 +20,9 @@ const AddLoanButton = ({ onClick }) => (
     + Another Loan
   </StyledButton>
 );
+
+AddLoanButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default AddLoanButton;
